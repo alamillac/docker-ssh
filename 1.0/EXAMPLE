@@ -1,0 +1,8 @@
+docker run --name test -p 22 -d alamilla/ssh
+
+docker run --rm -p 22 -i -t alamilla/ssh bash
+
+#para acceder al sistema user=ubuntu passwd=ubuntu
+
+ID_LAST_CONTAINER=$(docker ps -l -q)
+docker logs -f $ID_LAST_CONTAINER
